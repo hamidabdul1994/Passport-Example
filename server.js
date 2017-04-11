@@ -10,20 +10,7 @@ var facebookAuth = {
         'clientSecret'    : 'e5e96c56b76d4254ebc5878d57c6e8da', // facebook App Secret
         'callbackURL'     : 'http://localhost:8080/auth/facebook/callback'
     };
-var authProvider = {
-    'facebookAuth' : {
-           'clientID'      : '400556130301881', // your App ID
-           'clientSecret'  : 'b900c2000e5018c96e141574d7f1b3a6', // your App Secret
-           'callbackURL'   : '/auth/facebook/callback', //cllback url,
-           "profileFields" :['id', 'displayName', 'name', 'gender', 'emails','photos']
-       },
-       'googleAuth' : {
-           'clientID'      : '990199461077-8gvrb2gsq9hqips5hiu3i2d2jvsrb4h0.apps.googleusercontent.com', // your App ID
-           'clientSecret'  : 'BIYm0lc5CyhpMxzQ5zJwurBl', // your App Secret
-           'callbackURL'   : '/auth/google/callback', //callback url
-           "profileFields" :['id', 'displayName', 'name', 'gender', 'emails']
-         }
-       }
+var authProvider = require("./authenticate");
 // hardcoded users, ideally the users should be stored in a database
 var users = [
 {"id":111, "username":"amy", "password":"amyspassword"},
